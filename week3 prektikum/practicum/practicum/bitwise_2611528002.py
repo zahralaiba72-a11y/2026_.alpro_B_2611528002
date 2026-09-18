@@ -1,51 +1,58 @@
-# Create a file named comparison/bitwise_NIM.py
-# Variable names are appended with the last 4 digits of the student ID, example: number1_1234
+# Create a file named bitwise_NIM.py
+# Variable names are appended with the last 4 digits of the student ID (example: angka1_1234)
 # This program uses the input() function
-# The entered value will be converted to an integer data type
-# Comparison operator program in Python
 
-print("\n=========================")
+print("\n==============================")
 print("3. BITWISE OPERATOR")
-print("======================================")
- 
+print("==============================")
 
-number1 = int(input("Input number-1: "))
-number2 = int(input("Input number-2: "))
+angka1 = int(input("Enter bitwise number-1: "))
+angka2 = int(input("Enter bitwise number-2: "))
 
-# Greater than
-result = number1 > number2
-print("\nGreater than operator")
-print("number1 > number2 =", result)
+print("\nNumbers in decimal and binary form")
+print("angka1 =", angka1, "| binary =", bin(angka1))
+print("angka2 =", angka2, "| binary =", bin(angka2))
 
-# Less than
-result = number1 < number2
-print("\nLess than operator")
-print("number1 < number2 =", result)
+# Bitwise AND
+hasil = angka1 & angka2
+print("\nBitwise AND (&)")
+print(angka1, "&", angka2, "=", hasil)
+print("Binary result =", bin(hasil))
+print("Binary result (8 bit) =", format(hasil, "08b"))
 
-# Greater than or equal to
-result = number1 >= number2
-print("\nGreater than or equal to operator")
-print("number1 >= number2 =", result)
+# Bitwise OR
+hasil = angka1 | angka2
+print("\nBitwise OR (|)")
+print(angka1, "|", angka2, "=", hasil)
+print("Binary result =", bin(hasil))
+print("Binary result (8 bit) =", format(hasil, "08b"))
 
-# Less than or equal to
-result = number1 <= number2
-print("\nLess than or equal to operator")
-print("number1 <= number2 =", result)
+# Bitwise XOR
+hasil = angka1 ^ angka2
+print("\nBitwise XOR (^)")
+print(angka1, "^", angka2, "=", hasil)
+print("Binary result =", bin(hasil))
+print("Binary result (8 bit) =", format(hasil, "08b"))
 
-# Equal to
-result = number1 == number2
-print("\nEqual to operator")
-print("number1 == number2 =", result)
+# Bitwise NOT
+hasil = ~angka1
+print("\nBitwise NOT (~)")
+print("~", angka1, "=", hasil)
+print("Binary result =", bin(hasil))
+print("Binary result (8 bit) =", format(hasil, "08b"))
 
-# Not equal to
-result = number1 != number2
-print("\nNot equal to operator")
-print("number1 != number2 =", result)
+# Bitwise left shift
+jumlah_geser = int(input("\nEnter the number of bit shifts: "))
 
-# Additional: chained comparison in Python
-result = 0 < number1 < 100
-print("\nChained comparison")
-print("0 < number1 < 100 =", result)
+hasil = angka1 << jumlah_geser
+print("\nBitwise left shift (<<)")
+print(angka1, "<<", jumlah_geser, "=", hasil)
+print("Binary result =", bin(hasil))
+print("Binary result (8 bit) =", format(hasil, "08b"))
 
-result = 0 < number2 < 100
-print("0 < number2 < 100 =", result)
+# Bitwise right shift
+hasil = angka1 >> jumlah_geser
+print("\nBitwise right shift (>>)")
+print(angka1, ">>", jumlah_geser, "=", hasil)
+print("Binary result =", bin(hasil))
+print("Binary result (8 bit) =", format(hasil, "08b"))
